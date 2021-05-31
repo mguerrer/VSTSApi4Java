@@ -9,7 +9,7 @@ import java.time.LocalTime;
 /**
  * Unit test for simple App.
  */
-class AppTest {
+class VSTSApi4JavaTest {
     static String OrganizationUrl = "https://dev.azure.com/marcosguerrerow/";
     static String TeamProjectName = "GasConnect";
     static String PAT = "zzdfjwfbpwofxhcbxhsvyqydtrq7hi754c7vvjm5cpyreue6277q";
@@ -29,14 +29,14 @@ class AppTest {
     @Test
     void CreateTestRun() {
         Integer TestPlanId = 1859;
+        Integer TestCaseId = 1459;
         VSTSApi4Java VSTS = new VSTSApi4Java(OrganizationUrl, TeamProjectName, PAT);
 
         String[] TestPoints = { "1458", "1459", "1460", "1461"};
         Integer runId = VSTS.Runs.CreateTestRun( OrganizationUrl, TeamProjectName, "Mi Run-"+LocalTime.now(), TestPlanId, TestPoints);
         //String testResultId = UpdateTestPoints(  OrganizationUrl, TeamProjectName, runId, TestPlanId, TestPoints,  "{\"outcome\": \"Failed\"}" );
-/*
-        String testResultId = AddTestResultToRun(  OrganizationUrl, TeamProjectName, runId, TestPlanId, TestCaseId, Configuration,  "Passed" );
-        String testResultId = AddTestResultToTestPlanPoint(  OrganizationUrl, TeamProjectName, TestPlanId, Configuration,  Outcome );
-*/
+        //String testResultId = AddTestResultToRun(  OrganizationUrl, TeamProjectName, runId, TestPlanId, TestCaseId, 22,  "Passed" );
+        //String testResultId = AddTestResultToTestPlanPoint(  OrganizationUrl, TeamProjectName, TestPlanId, Configuration,  Outcome );
+
     }
 }
