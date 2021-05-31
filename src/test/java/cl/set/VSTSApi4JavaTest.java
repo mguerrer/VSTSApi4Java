@@ -1,18 +1,15 @@
 package cl.set;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.time.LocalTime;
 
 /**
- * Unit test for simple App.
+ * Unit test for VSTSApi4Java.
  */
 class VSTSApi4JavaTest {
     static String OrganizationUrl = "https://dev.azure.com/marcosguerrerow/";
     static String TeamProjectName = "GasConnect";
-    static String PAT = "zzdfjwfbpwofxhcbxhsvyqydtrq7hi754c7vvjm5cpyreue6277q";
+    static String PAT = "XXXX";
     /*** 
      *            Id    Conf        Test 
      * TestPoints 1458  21 iOS      734 - "UAT-Registro de nuevo usuario"
